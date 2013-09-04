@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_socialshareprivacy">
+		<header/>
+		<body>
+            <trans-unit id="tt_content.list_type" xml:space="preserve">
+            	<source>Social Share Privacy</source>
+            </trans-unit>
+            
+            <!-- Common Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.tab" xml:space="preserve">
+            	<source>General</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order" xml:space="preserve">
+            	<source>Share services</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.buffer" xml:space="preserve">
+            	<source>Buffer</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.delicious" xml:space="preserve">
+            	<source>Delicious</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.disqus" xml:space="preserve">
+            	<source>Disqus</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.mail" xml:space="preserve">
+            	<source>EMail</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.facebook" xml:space="preserve">
+            	<source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.flattr" xml:space="preserve">
+            	<source>Flattr</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.gplus" xml:space="preserve">
+            	<source>Google+</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.hackernews" xml:space="preserve">
+            	<source>Hacker News</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.pinterest" xml:space="preserve">
+            	<source>Pinterest</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.linkedin" xml:space="preserve">
+            	<source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.reddit" xml:space="preserve">
+            	<source>Reddit</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.stumbleupon" xml:space="preserve">
+            	<source>Stumble Upon</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.tumblr" xml:space="preserve">
+            	<source>Tumblr</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.twitter" xml:space="preserve">
+            	<source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.order.xing" xml:space="preserve">
+            	<source>XING</source>
+            </trans-unit>
+
+            <trans-unit id="tx_adxsocialshareprivacy.layout" xml:space="preserve">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.layout.line" xml:space="preserve">
+                <source>Horizontal</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.layout.box" xml:space="preserve">
+                <source>Vertical</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.perma_option" xml:space="preserve">
+                <source>Activate cookie</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.image" xml:space="preserve">
+                <source>Image</source>
+            </trans-unit>
+            
+            <!-- Buffer Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.buffer.tab" xml:space="preserve">
+            	<source>Buffer</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.buffer.text" xml:space="preserve">
+            	<source>Text</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.buffer.via" xml:space="preserve">
+            	<source>Via (Twitter username without the leading @)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.buffer.picture" xml:space="preserve">
+            	<source>Image</source>
+            </trans-unit>
+            
+            <!-- Delicious Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.delicious.tab" xml:space="preserve">
+            	<source>Delicious</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.delicious.title" xml:space="preserve">
+            	<source>Title</source>
+            </trans-unit>
+            
+            <!-- Disqus Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.disqus.tab" xml:space="preserve">
+            	<source>Disqus</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.disqus.shortname" xml:space="preserve">
+            	<source>Shortname</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.disqus.count" xml:space="preserve">
+            	<source>Count</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.disqus.count.comments" xml:space="preserve">
+            	<source>Comments</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.disqus.count.reactions" xml:space="preserve">
+            	<source>Reactions</source>
+            </trans-unit>
+            
+            <!-- Email Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.mail.tab" xml:space="preserve">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.mail.subject" xml:space="preserve">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.mail.body" xml:space="preserve">
+                <source>Body</source>
+            </trans-unit>
+            
+            <!-- Facebook Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.tab" xml:space="preserve">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.action" xml:space="preserve">
+                <source>Action</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.action.like" xml:space="preserve">
+                <source>Like</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.action.recommend" xml:space="preserve">
+                <source>Recommend</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.colorscheme" xml:space="preserve">
+                <source>Color Scheme</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.colorscheme.light" xml:space="preserve">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.colorscheme.dark" xml:space="preserve">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font" xml:space="preserve">
+                <source>Font</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.default" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.arial" xml:space="preserve">
+                <source>Arial</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.lucidagrande" xml:space="preserve">
+                <source>Lucida Grande</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.segoeui" xml:space="preserve">
+                <source>Segoe UI</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.tahoma" xml:space="preserve">
+                <source>Tahoma</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.trebuchetms" xml:space="preserve">
+                <source>Trebuchet MS</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.facebook.font.verdana" xml:space="preserve">
+                <source>Verdana</source>
+            </trans-unit>
+            
+            <!-- Flattr Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.tab" xml:space="preserve">
+                <source>Flattr</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.uid" xml:space="preserve">
+                <source>Username</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.tags" xml:space="preserve">
+                <source>Tags</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category" xml:space="preserve">
+                <source>Category</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.default" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.text" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.images" xml:space="preserve">
+                <source>Images</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.video" xml:space="preserve">
+                <source>Video</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.software" xml:space="preserve">
+                <source>Software</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.people" xml:space="preserve">
+                <source>People</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.category.other" xml:space="preserve">
+                <source>Other</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.flattr.tags" xml:space="preserve">
+                <source>Tags</source>
+            </trans-unit>
+            
+            <!-- Hacker News Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.hackernews.tab" xml:space="preserve">
+                <source>Hacker News</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.hackernews.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            
+            <!-- Pinterest Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.pinterest.tab" xml:space="preserve">
+                <source>Pinterest</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.pinterest.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.pinterest.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.pinterest.media" xml:space="preserve">
+                <source>Media</source>
+            </trans-unit>
+            
+            <!-- LinkedIn Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.linkedin.tab" xml:space="preserve">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.linkedin.showzero" xml:space="preserve">
+                <source>Show zero</source>
+            </trans-unit>
+            
+            <!-- Reddit Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.reddit.tab" xml:space="preserve">
+                <source>Reddit</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.reddit.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.reddit.bgcolor" xml:space="preserve">
+                <source>Background color</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.reddit.bordercolor" xml:space="preserve">
+                <source>Border color</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.reddit.newwindow" xml:space="preserve">
+                <source>Open in a new window</source>
+            </trans-unit>
+            
+            <!-- Tumblr Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.tab" xml:space="preserve">
+                <source>Tumblr</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.type" xml:space="preserve">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.type.link" xml:space="preserve">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.type.quote" xml:space="preserve">
+                <source>Quote</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.type.photo" xml:space="preserve">
+                <source>Photo</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.type.video" xml:space="preserve">
+                <source>Video</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.name" xml:space="preserve">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.description" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.photo" xml:space="preserve">
+                <source>Photo</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.clickthrou" xml:space="preserve">
+                <source>Clickthrou photos</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.caption" xml:space="preserve">
+                <source>Caption</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.caption.default" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.caption.photo" xml:space="preserve">
+                <source>Photo</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.caption.video" xml:space="preserve">
+                <source>Video</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.tumblr.quote" xml:space="preserve">
+                <source>Quote</source>
+            </trans-unit>
+            
+            <!-- Twitter Options -->
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.tab" xml:space="preserve">
+                <source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.text" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.via" xml:space="preserve">
+                <source>Via (Twitter username without the leading @)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.related" xml:space="preserve">
+                <source>Related (Twitter username without the leading @)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.hashtags" xml:space="preserve">
+                <source>Hashtags (without the leading #)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxsocialshareprivacy.services.twitter.dnt" xml:space="preserve">
+                <source>Do not tailor</source>
+            </trans-unit>
+
+		</body>
+	</file>
+</xliff>

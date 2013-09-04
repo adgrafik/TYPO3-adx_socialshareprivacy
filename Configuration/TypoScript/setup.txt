@@ -1,0 +1,912 @@
+
+plugin.tx_adxsocialshareprivacy = USER
+plugin.tx_adxsocialshareprivacy {
+
+	userFunc = tx_extbase_core_bootstrap->run
+	extensionName = AdxSocialshareprivacy
+	pluginName = Pi1
+
+	settings {
+
+		setup = COA
+		setup {
+
+			10 = LOAD_REGISTER
+			10 {
+
+				tx_adxsocialshareprivacy_uid = {$plugin.tx_adxsocialshareprivacy.uid}
+				tx_adxsocialshareprivacy_uid.override.field = uid
+
+				tx_adxsocialshareprivacy_services = {$plugin.tx_adxsocialshareprivacy.order}
+				tx_adxsocialshareprivacy_services {
+					override.field = tx_adxsocialshareprivacy_order
+					# Remove spaces for if.isInList function.
+					replacement.10.search = /\s/
+					replacement.10.replace =
+					replacement.10.useRegExp = 1
+				}
+
+				#
+				# Default options
+				#
+				tx_adxsocialshareprivacy.cObject = COA
+				tx_adxsocialshareprivacy.cObject {
+
+					10 = TEXT
+					10 {
+						data = register: tx_adxsocialshareprivacy_services
+						required = 1
+						# Make a JavaScript array.
+						replacement.10.search = ,
+						replacement.10.replace = ","
+						wrap = order:[" | "],
+					}
+
+					20 = TEXT
+					20 {
+						value = {$plugin.tx_adxsocialshareprivacy.pathPrefix}
+						required = 1
+						wrap = path_prefix:' | ',
+					}
+
+					30 = TEXT
+					30 {
+						value = {$plugin.tx_adxsocialshareprivacy.cssPath}
+						required = 1
+						wrap = css_path:' | ',
+					}
+
+					40 = TEXT
+					40 {
+						value = {$plugin.tx_adxsocialshareprivacy.title}
+						override.data = page: title
+						override.override.field = tx_adxsocialshareprivacy_title
+						required = 1
+						htmlspecialChars = 1
+						wrap = title:' | ',
+					}
+
+					50 = TEXT
+					50 {
+						value = {$plugin.tx_adxsocialshareprivacy.description}
+						override.data = page: description
+						override.override.field = tx_adxsocialshareprivacy_description
+						required = 1
+						htmlspecialChars = 1
+						wrap = description:' | ',
+					}
+
+					60 = TEXT
+					60 {
+
+						cObject = IMG_RESOURCE
+						cObject.file = {$plugin.tx_adxsocialshareprivacy.image}
+
+						override.cObject = IMG_RESOURCE
+						override.cObject {
+							file.import = uploads/media/
+							file.import.data = page: media
+							file.import.listNum = 0
+						}
+
+						override.override.cObject = IMG_RESOURCE
+						override.override.cObject {
+							file.import = uploads/pics/
+							file.import.field = tx_adxsocialshareprivacy_image
+							file.import.listNum = 0
+						}
+
+						required = 1
+						wrap = image:' | ',
+					}
+
+					70 = TEXT
+					70 {
+						value = {$plugin.tx_adxsocialshareprivacy.layout}
+						override.field = tx_adxsocialshareprivacy_layout
+						required = 1
+						wrap = layout:' | ',
+					}
+
+					80 = TEXT
+					80 {
+						value = perma_option:false,
+						if.isTrue = {$plugin.tx_adxsocialshareprivacy.permaOption}
+						if.isTrue.override.field = tx_adxsocialshareprivacy_perma_option
+						if.negate = 1
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_buffer {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = buffer
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = buffer
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.buffer.text}
+								override.field = tx_adxsocialshareprivacy_services_buffer_text
+								required = 1
+								htmlspecialChars = 1
+								wrap = text:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.buffer.via}
+								override.field = tx_adxsocialshareprivacy_services_buffer_via
+								required = 1
+								htmlspecialChars = 1
+								wrap = via:' | ',
+							}
+
+							30 = IMG_RESOURCE
+							30 {
+
+								file = {$plugin.tx_adxsocialshareprivacy.services.buffer.picture}
+								file.import = uploads/pics/
+								file.import.field = tx_adxsocialshareprivacy_services_buffer_picture
+								file.import.listNum = 0
+
+								stdWrap.required = 1
+								stdWrap.wrap = picture:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = buffer:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_delicious {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = delicious
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = delicious
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.delicious.title}
+								override.field = tx_adxsocialshareprivacy_services_delicious_title
+								required = 1
+								htmlspecialChars = 1
+								wrap = title:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = delicious:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_disqus {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = disqus
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = disqus
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.disqus.shortname}
+								override.field = tx_adxsocialshareprivacy_services_disqus_shortname
+								required = 1
+								htmlspecialChars = 1
+								wrap = shortname:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.disqus.count}
+								override.field = tx_adxsocialshareprivacy_services_disqus_count
+								required = 1
+								wrap = count:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = disqus:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_mail {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = mail
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = mail
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.mail.subject}
+								override.field = tx_adxsocialshareprivacy_services_mail_subject
+								required = 1
+								htmlspecialChars = 1
+								wrap = subject:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.mail.body}
+								override.field = tx_adxsocialshareprivacy_services_mail_body
+								required = 1
+								htmlspecialChars = 1
+								wrap = body:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = mail:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_facebook {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = facebook
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = facebook
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.facebook.action}
+								override.field = tx_adxsocialshareprivacy_services_facebook_action
+								required = 1
+								wrap = action:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.facebook.colorscheme}
+								override.field = tx_adxsocialshareprivacy_services_facebook_colorscheme
+								required = 1
+								wrap = colorscheme:' | ',
+							}
+
+							30 = TEXT
+							30 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.facebook.font}
+								override.field = tx_adxsocialshareprivacy_services_facebook_font
+								required = 1
+								wrap = font:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = facebook:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_flattr {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = flattr
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = flattr
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.flattr.title}
+								override.field = tx_adxsocialshareprivacy_services_flattr_title
+								required = 1
+								htmlspecialChars = 1
+								wrap = title:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.flattr.description}
+								override.field = tx_adxsocialshareprivacy_services_flattr_description
+								required = 1
+								htmlspecialChars = 1
+								wrap = description:' | ',
+							}
+
+							30 = TEXT
+							30 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.flattr.uid}
+								override.field = tx_adxsocialshareprivacy_services_flattr_uid
+								required = 1
+								htmlspecialChars = 1
+								wrap = uid:' | ',
+							}
+
+							40 = TEXT
+							40 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.flattr.category}
+								override.field = tx_adxsocialshareprivacy_services_flattr_category
+								required = 1
+								wrap = category:' | ',
+							}
+
+							50 = TEXT
+							50 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.flattr.tags}
+								override.field = tx_adxsocialshareprivacy_services_flattr_tags
+								required = 1
+								htmlspecialChars = 1
+								wrap = tags:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = flattr:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_gplus = gplus:{status:false},
+				tx_adxsocialshareprivacy_services_gplus {
+					if.value.data = register: tx_adxsocialshareprivacy_services
+					if.isInList = gplus
+					if.negate = 1
+				}
+
+				tx_adxsocialshareprivacy_services_hackernews {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = hackernews
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = hackernews
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.hackernews.title}
+								override.field = tx_adxsocialshareprivacy_services_hackernews_title
+								required = 1
+								htmlspecialChars = 1
+								wrap = title:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = hackernews:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_pinterest {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = pinterest
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = pinterest
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.pinterest.title}
+								override.field = tx_adxsocialshareprivacy_services_pinterest_title
+								required = 1
+								htmlspecialChars = 1
+								wrap = title:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.pinterest.description}
+								override.field = tx_adxsocialshareprivacy_services_pinterest_description
+								required = 1
+								htmlspecialChars = 1
+								wrap = description:' | ',
+							}
+
+							30 = IMG_RESOURCE
+							30 {
+
+								file = {$plugin.tx_adxsocialshareprivacy.services.pinterest.media}
+								file.import = uploads/pics/
+								file.import.field = tx_adxsocialshareprivacy_services_pinterest_media
+								file.import.listNum = 0
+
+								stdWrap.required = 1
+								stdWrap.wrap = media:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = pinterest:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_linkedin {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = linkedin
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = linkedin
+
+							10 = TEXT
+							10 {
+								value = showzero:true,
+								if.isTrue = {$plugin.tx_adxsocialshareprivacy.services.linkedin.showzero}
+								if.isTrue.override.field = tx_adxsocialshareprivacy_services_linkedin_showzero
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = linkedin:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_reddit {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = reddit
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = reddit
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.reddit.title}
+								override.field = tx_adxsocialshareprivacy_services_reddit_title
+								required = 1
+								htmlspecialChars = 1
+								wrap = title:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.reddit.bgcolor}
+								override.field = tx_adxsocialshareprivacy_services_reddit_bgcolor
+								required = 1
+								htmlspecialChars = 1
+								wrap = bgcolor:' | ',
+							}
+
+							30 = TEXT
+							30 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.reddit.bordercolor}
+								override.field = tx_adxsocialshareprivacy_services_reddit_bordercolor
+								required = 1
+								htmlspecialChars = 1
+								wrap = bordercolor:' | ',
+							}
+
+							40 = TEXT
+							40 {
+								value = newwindow:false,
+								if.isTrue = {$plugin.tx_adxsocialshareprivacy.services.linkedin.showzero}
+								if.isTrue.override.field = tx_adxsocialshareprivacy_services_reddit_newwindow
+								if.negate = 1
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = reddit:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_stumbleupon = stumbleupon:{status:false},
+				tx_adxsocialshareprivacy_services_stumbleupon {
+					if.value.data = register: tx_adxsocialshareprivacy_services
+					if.isInList = stumbleupon
+					if.negate = 1
+				}
+
+				tx_adxsocialshareprivacy_services_tumblr {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = tumblr
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = tumblr
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.tumblr.type}
+								override.field = tx_adxsocialshareprivacy_services_tumblr_type
+								required = 1
+								wrap = type:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.tumblr.name}
+								override.field = tx_adxsocialshareprivacy_services_tumblr_name
+								required = 1
+								htmlspecialChars = 1
+								wrap = name:' | ',
+							}
+
+							30 = TEXT
+							30 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.tumblr.description}
+								override.field = tx_adxsocialshareprivacy_services_tumblr_description
+								required = 1
+								htmlspecialChars = 1
+								wrap = description:' | ',
+							}
+
+							40 = IMG_RESOURCE
+							40 {
+		
+								file = {$plugin.tx_adxsocialshareprivacy.services.tumblr.photo}
+								file.import = uploads/pics/
+								file.import.field = tx_adxsocialshareprivacy_services_tumblr_photo
+								file.import.listNum = 0
+
+								stdWrap.required = 1
+								stdWrap.wrap = photo:' | ',
+							}
+
+							50 = TEXT
+							50 {
+								value = quote:'quote',
+								if.isTrue = {$plugin.tx_adxsocialshareprivacy.services.tumblr.quote}
+								if.isTrue.override.field = tx_adxsocialshareprivacy_services_tumblr_quote
+							}
+
+							60 = TEXT
+							60 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.tumblr.clickthrou}
+								override.field = tx_adxsocialshareprivacy_services_tumblr_clickthrou
+								required = 1
+								wrap = clickthrou:' | ',
+							}
+
+							70 = TEXT
+							70 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.tumblr.caption}
+								override.field = tx_adxsocialshareprivacy_services_tumblr_caption
+								required = 1
+								htmlspecialChars = 1
+								wrap = caption:' | ',
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = tumblr:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_twitter {
+
+					cObject = COA
+					cObject {
+
+						10 = TEXT
+						10 {
+							value = status:false,
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = twitter
+							if.negate = 1
+						}
+
+						20 = COA
+						20 {
+
+							if.value.data = register: tx_adxsocialshareprivacy_services
+							if.isInList = twitter
+
+							10 = TEXT
+							10 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.twitter.text}
+								override.field = tx_adxsocialshareprivacy_services_twitter_text
+								required = 1
+								htmlspecialChars = 1
+								wrap = text:' | ',
+							}
+
+							20 = TEXT
+							20 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.twitter.via}
+								override.field = tx_adxsocialshareprivacy_services_twitter_via
+								required = 1
+								htmlspecialChars = 1
+								wrap = via:' | ',
+							}
+
+							30 = TEXT
+							30 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.twitter.related}
+								override.field = tx_adxsocialshareprivacy_services_twitter_related
+								required = 1
+								htmlspecialChars = 1
+								wrap = related:' | ',
+							}
+
+							40 = TEXT
+							40 {
+								value = {$plugin.tx_adxsocialshareprivacy.services.twitter.hashtags}
+								override.field = tx_adxsocialshareprivacy_services_twitter_hashtags
+								required = 1
+								htmlspecialChars = 1
+								wrap = hashtags:' | ',
+							}
+
+							50 = TEXT
+							50 {
+								value = dnt:false,
+								if.isTrue = {$plugin.tx_adxsocialshareprivacy.services.twitter.dnt}
+								if.isTrue.override.field = tx_adxsocialshareprivacy_services_twitter_dnt
+								if.negate = 1
+							}
+						}
+
+						stdWrap.required = 1
+						stdWrap.wrap = twitter:{ | },
+					}
+				}
+
+				tx_adxsocialshareprivacy_services_xing = xing:{status:false},
+				tx_adxsocialshareprivacy_services_xing {
+					if.value.data = register: tx_adxsocialshareprivacy_services
+					if.isInList = xing
+					if.negate = 1
+				}
+			}
+
+			20 = USER
+			20 {
+				userFunc = tx_t3jquery->addJS
+				compress = 1
+				jsfile = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/socialshareprivacy.js
+			}
+
+			30 = USER
+			30 {
+				userFunc = tx_t3jquery->addJS
+				compress = 1
+				jsfile.if.value = de,es,fr,nl,pl,pt,ru
+				jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
+				jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/{$plugin.tx_adxsocialshareprivacy.language}/socialshareprivacy.js
+			}
+
+
+			40 = TEXT
+			40.data = register: tx_adxsocialshareprivacy_services
+			40.split {
+
+				token = ,
+				cObjNum = 1
+
+				1 = COA
+				1 {
+
+					10 = LOAD_REGISTER
+					10.tx_adxsocialshareprivacy_service.current = 1
+
+					20 = USER
+					20 {
+						userFunc = tx_t3jquery->addJS
+						compress = 1
+						jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/modules/{register: tx_adxsocialshareprivacy_service}.js
+					}
+
+					30 = USER
+					30 {
+						userFunc = tx_t3jquery->addJS
+						compress = 1
+						jsfile.if.value = de,es,fr,nl,pl,pt,ru
+						jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
+						jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/{$plugin.tx_adxsocialshareprivacy.language}/modules/{register: tx_adxsocialshareprivacy_service}.js
+					}
+				}
+			}
+
+			50 = USER
+			50 {
+
+				userFunc = tx_t3jquery->addJS
+				compress = 1
+
+				jsdata.cObject = COA
+				jsdata.cObject {
+
+					#
+					# Default options
+					#
+					10 = TEXT
+					10.data = register: tx_adxsocialshareprivacy
+
+					#
+					# Service options
+					#
+					20 = COA
+					20 {
+
+						10 = TEXT
+						10.data = register: tx_adxsocialshareprivacy_services_buffer
+
+						11 = TEXT
+						11.data = register: tx_adxsocialshareprivacy_services_delicious
+
+						12 = TEXT
+						12.data = register: tx_adxsocialshareprivacy_services_disqus
+
+						13 = TEXT
+						13.data = register: tx_adxsocialshareprivacy_services_mail
+
+						14 = TEXT
+						14.data = register: tx_adxsocialshareprivacy_services_facebook
+
+						15 = TEXT
+						15.data = register: tx_adxsocialshareprivacy_services_flattr
+
+						16 = TEXT
+						16.data = register: tx_adxsocialshareprivacy_services_gplus
+
+						17 = TEXT
+						17.data = register: tx_adxsocialshareprivacy_services_hackernews
+
+						18 = TEXT
+						18.data = register: tx_adxsocialshareprivacy_services_pinterest
+
+						19 = TEXT
+						19.data = register: tx_adxsocialshareprivacy_services_linkedin
+
+						20 = TEXT
+						20.data = register: tx_adxsocialshareprivacy_services_reddit
+
+						21 = TEXT
+						21.data = register: tx_adxsocialshareprivacy_services_stumbleupon
+
+						21 = TEXT
+						21.data = register: tx_adxsocialshareprivacy_services_tumblr
+
+						22 = TEXT
+						22.data = register: tx_adxsocialshareprivacy_services_twitter
+
+						23 = TEXT
+						23.data = register: tx_adxsocialshareprivacy_services_xing
+
+						wrap = services: { | }
+					}
+
+					wrap = socialSharePrivacy({ | });
+					stdWrap.dataWrap = $('#social_share_privacy_{register: tx_adxsocialshareprivacy_uid}'). |
+
+					# Remove dirty commas.
+					stdWrap.replacement.10.search = ,}
+					stdWrap.replacement.10.replace = }
+				}
+			}
+
+			60 = TEXT
+			60.dataWrap = <div id="social_share_privacy_{register: tx_adxsocialshareprivacy_uid}"></div>
+
+			99 = RESTORE_REGISTER
+		}
+	}
+}
+
+[globalVar = LIT:1 = {$plugin.tx_adxsocialshareprivacy.insertMetaXUACompatible}]
+
+page.meta {
+	X-UA-Compatible = IE=edge,chrome=1
+	X-UA-Compatible.httpEquivalent = 1
+}
+
+[end]

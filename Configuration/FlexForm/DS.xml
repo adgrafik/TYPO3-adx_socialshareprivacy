@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<tx_adxsocialshareprivacy>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.tab</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<settings.flexform.order type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order</label>
+							<config type="array">
+								<type>select</type>
+								<minitems type="string">1</minitems>
+								<maxitems type="string">99</maxitems>
+								<size type="string">6</size>
+								<default type="string">twitter,facebook,gplus</default>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.buffer</numIndex>
+										<numIndex index="1">buffer</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.delicious</numIndex>
+										<numIndex index="1">delicious</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.disqus</numIndex>
+										<numIndex index="1">disqus</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.mail</numIndex>
+										<numIndex index="1">mail</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.facebook</numIndex>
+										<numIndex index="1">facebook</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.flattr</numIndex>
+										<numIndex index="1">flattr</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.gplus</numIndex>
+										<numIndex index="1">gplus</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.hackernews</numIndex>
+										<numIndex index="1">hackernews</numIndex>
+									</numIndex>
+									<numIndex index="9">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.pinterest</numIndex>
+										<numIndex index="1">pinterest</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.linkedin</numIndex>
+										<numIndex index="1">linkedin</numIndex>
+									</numIndex>
+									<numIndex index="11">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.reddit</numIndex>
+										<numIndex index="1">reddit</numIndex>
+									</numIndex>
+									<numIndex index="12">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.stumbleupon</numIndex>
+										<numIndex index="1">stumbleupon</numIndex>
+									</numIndex>
+									<numIndex index="13">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.tumblr</numIndex>
+										<numIndex index="1">tumblr</numIndex>
+									</numIndex>
+									<numIndex index="14">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.twitter</numIndex>
+										<numIndex index="1">twitter</numIndex>
+									</numIndex>
+									<numIndex index="15">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.xing</numIndex>
+										<numIndex index="1">xing</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.flexform.order>
+                    <settings.flexform.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.title>
+                    <settings.flexform.description type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.description</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.description>
+                    <settings.flexform.image type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.image</label>
+                            <config type="array">
+                                <type>group</type>
+                                <allowed>gif,jpg,jpeg,png</allowed>
+                                <internal_type>file</internal_type>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <show_thumbs>1</show_thumbs>
+                                <uploadfolder>uploads/pics</uploadfolder>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.image>
+                    <settings.flexform.layout type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.layout</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <default type="string">line</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.layout.line</numIndex>
+                                        <numIndex index="1">line</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.layout.box</numIndex>
+                                        <numIndex index="1">box</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.layout>
+                    <settings.flexform.perma_option type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.perma_option</label>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.perma_option>
+				</el>
+			</ROOT>
+		</tx_adxsocialshareprivacy>
+        <tx_adxsocialshareprivacy_services_buffer type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.buffer.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.buffer.text type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.buffer.text</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.buffer.text>
+                    <settings.flexform.services.buffer.via type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.buffer.via</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.buffer.via>
+                    <settings.flexform.services.buffer.picture type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.buffer.picture</label>
+                            <config type="array">
+                                <type>group</type>
+                                <allowed>gif,jpg,jpeg,png</allowed>
+                                <internal_type>file</internal_type>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <show_thumbs>1</show_thumbs>
+                                <uploadfolder>uploads/pics</uploadfolder>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.buffer.picture>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_buffer>
+        <tx_adxsocialshareprivacy_services_delicious type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.delicious.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.delicious.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.delicious.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.delicious.title>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_delicious>
+        <tx_adxsocialshareprivacy_services_disqus type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.disqus.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.disqus.shortname type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.disqus.shortname</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.disqus.shortname>
+                    <settings.flexform.services.disqus.count type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.disqus.count</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.disqus.count.comments</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.disqus.count.reactions</numIndex>
+                                        <numIndex index="1">reactions</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.disqus.count>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_disqus>
+        <tx_adxsocialshareprivacy_services_mail type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.mail.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.mail.subject type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.mail.subject</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.mail.subject>
+                    <settings.flexform.services.mail.body type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.mail.body</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.mail.body>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_mail>
+        <tx_adxsocialshareprivacy_services_facebook type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.facebook.action type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.action</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.action.like</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.action.recommend</numIndex>
+                                        <numIndex index="1">recommend</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.facebook.action>
+                    <settings.flexform.services.facebook.colorscheme type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.colorscheme</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.colorscheme.light</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.colorscheme.dark</numIndex>
+                                        <numIndex index="1">dark</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.facebook.colorscheme>
+                    <settings.flexform.services.facebook.font type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.arial</numIndex>
+                                        <numIndex index="1">arial</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.lucidagrande</numIndex>
+                                        <numIndex index="1">lucidagrande</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.segoeui</numIndex>
+                                        <numIndex index="1">segoeui</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.tahoma</numIndex>
+                                        <numIndex index="1">tahoma</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.trebuchetms</numIndex>
+                                        <numIndex index="1">trebuchetms</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.facebook.font.verdana</numIndex>
+                                        <numIndex index="1">verdana</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.facebook.font>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_facebook>
+        <tx_adxsocialshareprivacy_services_flattr type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.flattr.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.flattr.title>
+                    <settings.flexform.services.flattr.description type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.description</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.flattr.description>
+                    <settings.flexform.services.flattr.uid type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.uid</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.flattr.uid>
+                    <settings.flexform.services.flattr.tags type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.tags</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.flattr.tags>
+                    <settings.flexform.services.flattr.category type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.text</numIndex>
+                                        <numIndex index="1">text</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.images</numIndex>
+                                        <numIndex index="1">images</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.video</numIndex>
+                                        <numIndex index="1">video</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.software</numIndex>
+                                        <numIndex index="1">software</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.people</numIndex>
+                                        <numIndex index="1">people</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.flattr.category.other</numIndex>
+                                        <numIndex index="1">other</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.flattr.category>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_flattr>
+        <tx_adxsocialshareprivacy_services_hackernews type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.hackernews.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.hackernews.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.hackernews.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.hackernews.title>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_hackernews>
+        <tx_adxsocialshareprivacy_services_pinterest type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.pinterest.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.pinterest.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.pinterest.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.pinterest.title>
+                    <settings.flexform.services.pinterest.description type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.pinterest.description</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.pinterest.description>
+                    <settings.flexform.services.pinterest.media type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.pinterest.media</label>
+                            <config type="array">
+                                <type>group</type>
+                                <allowed>gif,jpg,jpeg,png</allowed>
+                                <internal_type>file</internal_type>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <show_thumbs>1</show_thumbs>
+                                <uploadfolder>uploads/pics</uploadfolder>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.pinterest.media>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_pinterest>
+        <tx_adxsocialshareprivacy_services_linkedin type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.linkedin.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.linkedin.showzero type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.linkedin.showzero</label>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.linkedin.showzero>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_linkedin>
+        <tx_adxsocialshareprivacy_services_reddit type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.reddit.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.reddit.title type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.reddit.title</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.reddit.title>
+                    <settings.flexform.services.reddit.bgcolor type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.reddit.bgcolor</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>6</size>
+                                <wizards>
+                                    <_PADDING type="integer">2</_PADDING>
+                                    <color>
+                                        <type>colorbox</type>
+                                        <dim>18x18</dim>
+                                        <script>wizard_colorpicker.php</script>
+                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    </color>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.reddit.bgcolor>
+                    <settings.flexform.services.reddit.bordercolor type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.reddit.bordercolor</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>6</size>
+                                <wizards>
+                                    <_PADDING type="integer">2</_PADDING>
+                                    <color>
+                                        <type>colorbox</type>
+                                        <dim>18x18</dim>
+                                        <script>wizard_colorpicker.php</script>
+                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    </color>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.reddit.bordercolor>
+                    <settings.flexform.services.reddit.newwindow type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.reddit.newwindow</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default>1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.reddit.newwindow>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_reddit>
+        <tx_adxsocialshareprivacy_services_tumblr type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.tumblr.type type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.type</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <default></default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.type.link</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.type.quote</numIndex>
+                                        <numIndex index="1">quote</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.type.photo</numIndex>
+                                        <numIndex index="1">photo</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.type.video</numIndex>
+                                        <numIndex index="1">video</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.type>
+                    <settings.flexform.services.tumblr.name type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.name</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.name>
+                    <settings.flexform.services.tumblr.description type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.description</label>
+                            <config type="array">
+                                <type>text</type>
+                                <cols>50</cols>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.description>
+                    <settings.flexform.services.tumblr.photo type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.photo</label>
+                            <config type="array">
+                                <type>group</type>
+                                <allowed>gif,jpg,jpeg,png</allowed>
+                                <internal_type>file</internal_type>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <show_thumbs>1</show_thumbs>
+                                <uploadfolder>uploads/pics</uploadfolder>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.photo>
+                    <settings.flexform.services.tumblr.caption type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.caption</label>
+                            <config type="array">
+                                <type>select</type>
+                                <minitems>0</minitems>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.caption.default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.caption.photo</numIndex>
+                                        <numIndex index="1">quote</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.caption.video</numIndex>
+                                        <numIndex index="1">photo</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.caption>
+                    <settings.flexform.services.tumblr.quote type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.quote</label>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.quote>
+                    <settings.flexform.services.tumblr.clickthrou type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.tumblr.clickthrou</label>
+                            <config type="array">
+                                <type>input</type>
+                                <wizards type="array">
+                                    <_PADDING type="integer">2</_PADDING>
+                                    <link type="array">
+                                        <type>popup</type>
+                                        <title>Link</title>
+                                        <icon>link_popup.gif</icon>
+                                        <script>browse_links.php?mode=wizard</script>
+                                        <JSopenParams>height=600,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    </link>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.tumblr.clickthrou>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_tumblr>
+        <tx_adxsocialshareprivacy_services_twitter type="array">
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.tab</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.flexform.services.twitter.text type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.text</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.twitter.text>
+                    <settings.flexform.services.twitter.via type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.via</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.twitter.via>
+                    <settings.flexform.services.twitter.related type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.related</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.twitter.related>
+                    <settings.flexform.services.twitter.hashtags type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.hashtags</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.twitter.hashtags>
+                    <settings.flexform.services.twitter.dnt type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.services.twitter.dnt</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default>1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.services.twitter.dnt>
+                </el>
+            </ROOT>
+        </tx_adxsocialshareprivacy_services_twitter>
+	</sheets>
+</T3DataStructure>

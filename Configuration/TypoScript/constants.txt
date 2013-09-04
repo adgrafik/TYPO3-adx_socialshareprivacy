@@ -1,0 +1,112 @@
+
+plugin.tx_adxsocialshareprivacy {
+
+	insertMetaXUACompatible = 1
+
+	uid = 
+
+	# Available values: buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
+	order = buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
+
+	# Available values: line (default), box
+	layout = 
+
+	permaOption = 1
+
+	title = 
+
+	description = 
+
+	image = 
+
+	pathPrefix = typo3conf/ext/adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/
+
+	cssPath = stylesheets/socialshareprivacy.css
+
+	# Leave empty for en language. Available languages: de, es, fr, nl, pl, pt, ru
+	language = 
+
+	services {
+
+		buffer {
+			text = 
+			via = 
+			picture = 
+		}
+
+		delicious {
+			title = 
+		}
+
+		disqus {
+			shortname = 
+			# Available values: comments (default), reactions
+			count = 
+		}
+
+		mail {
+			subject = 
+			body = 
+		}
+
+		facebook {
+			# Available values: like (default), recommend
+			action = 
+			# Available values: light (default), light
+			colorscheme = 
+			# Available values: (default empty), arial, lucidagrande, segoeui, tahoma, trebuchetms, verdana
+			font = 
+		}
+
+		flattr {
+			title = 
+			description = 
+			uid = 
+			tags = 
+			# Available values: (default empty), text, images, video, software, people, other
+			category = 
+			tags = 
+		}
+
+		hackernews {
+			title = 
+		}
+
+		pinterest {
+			title = 
+			description = 
+			media = 
+		}
+
+		linkedin {
+			showzero = 
+		}
+
+		reddit {
+			title = 
+			bgcolor = 
+			bordercolor = 
+			newwindow = 
+		}
+
+		tumblr {
+			# Available values: link (default), quote, photo, video
+			type = 
+			name = 
+			description = 
+			photo = 
+			clickthrou = 
+			# Available values: (default empty), photo, video
+			caption = 
+			quote = 
+		}
+
+		twitter {
+			text = 
+			via = 
+			related = 
+			hashtags = 
+			dnt = 
+		}
+	}
+}

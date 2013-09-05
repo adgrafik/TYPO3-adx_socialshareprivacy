@@ -14,8 +14,12 @@ plugin.tx_adxsocialshareprivacy {
 			10 = LOAD_REGISTER
 			10 {
 
-				tx_adxsocialshareprivacy_uid = {$plugin.tx_adxsocialshareprivacy.uid}
-				tx_adxsocialshareprivacy_uid.override.field = uid
+				tx_adxsocialshareprivacy_id = {$plugin.tx_adxsocialshareprivacy.id}
+				tx_adxsocialshareprivacy_id.override {
+					field = uid
+					required = 1
+					wrap = social_share_privacy_ |
+				}
 
 				tx_adxsocialshareprivacy_services = {$plugin.tx_adxsocialshareprivacy.order}
 				tx_adxsocialshareprivacy_services {
@@ -106,6 +110,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Buffer options
+				#
 				tx_adxsocialshareprivacy_services_buffer {
 
 					cObject = COA
@@ -161,6 +168,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Delicious options
+				#
 				tx_adxsocialshareprivacy_services_delicious {
 
 					cObject = COA
@@ -195,6 +205,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Disqus options
+				#
 				tx_adxsocialshareprivacy_services_disqus {
 
 					cObject = COA
@@ -237,6 +250,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# EMail options
+				#
 				tx_adxsocialshareprivacy_services_mail {
 
 					cObject = COA
@@ -280,6 +296,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Facebook options
+				#
 				tx_adxsocialshareprivacy_services_facebook {
 
 					cObject = COA
@@ -329,6 +348,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Flattr options
+				#
 				tx_adxsocialshareprivacy_services_flattr {
 
 					cObject = COA
@@ -398,6 +420,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Google+ options
+				#
 				tx_adxsocialshareprivacy_services_gplus = gplus:{status:false},
 				tx_adxsocialshareprivacy_services_gplus {
 					if.value.data = register: tx_adxsocialshareprivacy_services
@@ -405,6 +430,9 @@ plugin.tx_adxsocialshareprivacy {
 					if.negate = 1
 				}
 
+				#
+				# Hacker News options
+				#
 				tx_adxsocialshareprivacy_services_hackernews {
 
 					cObject = COA
@@ -439,6 +467,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Pinterest options
+				#
 				tx_adxsocialshareprivacy_services_pinterest {
 
 					cObject = COA
@@ -494,6 +525,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# LinkedIn options
+				#
 				tx_adxsocialshareprivacy_services_linkedin {
 
 					cObject = COA
@@ -526,6 +560,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Reddit options
+				#
 				tx_adxsocialshareprivacy_services_reddit {
 
 					cObject = COA
@@ -586,6 +623,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Stumble Upon options
+				#
 				tx_adxsocialshareprivacy_services_stumbleupon = stumbleupon:{status:false},
 				tx_adxsocialshareprivacy_services_stumbleupon {
 					if.value.data = register: tx_adxsocialshareprivacy_services
@@ -593,6 +633,9 @@ plugin.tx_adxsocialshareprivacy {
 					if.negate = 1
 				}
 
+				#
+				# Tumblr options
+				#
 				tx_adxsocialshareprivacy_services_tumblr {
 
 					cObject = COA
@@ -680,6 +723,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# Twitter options
+				#
 				tx_adxsocialshareprivacy_services_twitter {
 
 					cObject = COA
@@ -749,6 +795,9 @@ plugin.tx_adxsocialshareprivacy {
 					}
 				}
 
+				#
+				# XING options
+				#
 				tx_adxsocialshareprivacy_services_xing = xing:{status:false},
 				tx_adxsocialshareprivacy_services_xing {
 					if.value.data = register: tx_adxsocialshareprivacy_services
@@ -766,14 +815,18 @@ plugin.tx_adxsocialshareprivacy {
 
 			30 = USER
 			30 {
+
 				userFunc = tx_t3jquery->addJS
 				compress = 1
+
 				jsfile = {$plugin.tx_adxsocialshareprivacy.language}
-				jsfile.override.data = TSFE: lang
-				jsfile.if.value = de,es,fr,nl,pl,pt,ru
-				jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
-				jsfile.if.isInList.override.data = TSFE: lang
-				jsfile.wrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /socialshareprivacy.js
+				jsfile {
+					override.data = TSFE: lang
+					if.value = de,es,fr,nl,pl,pt,ru
+					if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
+					if.isInList.override.data = TSFE: lang
+					wrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /socialshareprivacy.js
+				}
 			}
 
 
@@ -799,14 +852,18 @@ plugin.tx_adxsocialshareprivacy {
 
 					30 = USER
 					30 {
+
 						userFunc = tx_t3jquery->addJS
 						compress = 1
+
 						jsfile = {$plugin.tx_adxsocialshareprivacy.language}
-						jsfile.override.data = TSFE: lang
-						jsfile.if.value = de,es,fr,nl,pl,pt,ru
-						jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
-						jsfile.if.isInList.override.data = TSFE: lang
-						jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /modules/{register: tx_adxsocialshareprivacy_service}.js
+						jsfile {
+							override.data = TSFE: lang
+							if.value = de,es,fr,nl,pl,pt,ru
+							if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
+							if.isInList.override.data = TSFE: lang
+							dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /modules/{register: tx_adxsocialshareprivacy_service}.js
+						}
 					}
 				}
 			}
@@ -881,7 +938,7 @@ plugin.tx_adxsocialshareprivacy {
 					}
 
 					wrap = socialSharePrivacy({ | });
-					stdWrap.dataWrap = $('#social_share_privacy_{register: tx_adxsocialshareprivacy_uid}'). |
+					stdWrap.dataWrap = $('#{register: tx_adxsocialshareprivacy_id}'). |
 
 					# Remove dirty commas.
 					stdWrap.replacement.10.search = ,}
@@ -890,18 +947,15 @@ plugin.tx_adxsocialshareprivacy {
 			}
 
 			60 = TEXT
-			60.dataWrap = <div id="social_share_privacy_{register: tx_adxsocialshareprivacy_uid}"></div>
+			60.dataWrap = <div id="{register: tx_adxsocialshareprivacy_id}"></div>
 
 			99 = RESTORE_REGISTER
 		}
 	}
 }
 
-[globalVar = LIT:1 = {$plugin.tx_adxsocialshareprivacy.insertMetaXUACompatible}]
-
 page.meta {
 	X-UA-Compatible = IE=edge,chrome=1
 	X-UA-Compatible.httpEquivalent = 1
+	X-UA-Compatible.if.isTrue = {$plugin.tx_adxsocialshareprivacy.insertMetaXUACompatible}
 }
-
-[end]

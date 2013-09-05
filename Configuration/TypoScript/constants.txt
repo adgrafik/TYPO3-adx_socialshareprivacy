@@ -3,7 +3,7 @@ plugin.tx_adxsocialshareprivacy {
 
 	insertMetaXUACompatible = 1
 
-	uid = 
+	id = 
 
 	# Available values: buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
 	order = buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing

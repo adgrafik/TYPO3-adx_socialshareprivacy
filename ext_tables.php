@@ -22,7 +22,7 @@ if (version_compare(TYPO3_branch, '6.0', '<')) {
 
 } else {
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPlugin(
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 		$_EXTKEY,
 		'Pi1',
 		'LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xml:tt_content.list_type'

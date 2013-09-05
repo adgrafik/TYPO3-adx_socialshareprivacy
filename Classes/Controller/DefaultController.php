@@ -29,22 +29,32 @@
  * @package	TYPO3
  * @subpackage	tx_gridelements
  */
-class Tx_AdxSocialshareprivacy_Controller_DefaultController extends \Tx_Extbase_MVC_Controller_ActionController {
+class Tx_AdxSocialshareprivacy_Controller_DefaultController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
 	 * The main method of the PlugIn
 	 *
 	 * @return string
+	 * @throws Exception
 	 */
 	public function indexAction() {
 
 		$contentObject = $this->configurationManager->getContentObject();
 
+		if (isset($this->settings['setup']) === FALSE) {
+			throw new Exception('TypoScript settings not found.', 1);
+		}
+
 		if (isset($this->settings['flexform'])) {
 			$this->mergeFlexformValuesWithContentObjectData($contentObject, $this->settings['flexform']);
 		}
 
-		$typoScriptSetup = Tx_Extbase_Utility_TypoScript::convertPlainArrayToTypoScriptArray($this->settings['setup']);
+		if (version_compare(TYPO3_branch, '6.0', '<')) {
+			$typoScriptSetup = Tx_Extbase_Utility_TypoScript::convertPlainArrayToTypoScriptArray($this->settings['setup']);
+		} else {
+			$typoScriptService = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
+			$typoScriptSetup = $typoScriptService->convertPlainArrayToTypoScriptArray($this->settings['setup']);
+		}
 
 		$content = $contentObject->cObjGetSingle($this->settings['setup']['_typoScriptNodeValue'], $typoScriptSetup);
 

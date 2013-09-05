@@ -14,7 +14,7 @@ if (version_compare(TYPO3_branch, '6.0', '<')) {
 
 } else {
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::configurePlugin(
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		$_EXTKEY,
 		'Pi1',
 		array(

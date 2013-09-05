@@ -59,8 +59,7 @@ plugin.tx_adxsocialshareprivacy {
 					40 = TEXT
 					40 {
 						value = {$plugin.tx_adxsocialshareprivacy.title}
-						override.data = page: title
-						override.override.field = tx_adxsocialshareprivacy_title
+						override.field = tx_adxsocialshareprivacy_title
 						required = 1
 						htmlspecialChars = 1
 						wrap = title:' | ',
@@ -69,8 +68,7 @@ plugin.tx_adxsocialshareprivacy {
 					50 = TEXT
 					50 {
 						value = {$plugin.tx_adxsocialshareprivacy.description}
-						override.data = page: description
-						override.override.field = tx_adxsocialshareprivacy_description
+						override.field = tx_adxsocialshareprivacy_description
 						required = 1
 						htmlspecialChars = 1
 						wrap = description:' | ',
@@ -80,24 +78,15 @@ plugin.tx_adxsocialshareprivacy {
 					60 {
 
 						cObject = IMG_RESOURCE
-						cObject.file = {$plugin.tx_adxsocialshareprivacy.image}
-
-						override.cObject = IMG_RESOURCE
-						override.cObject {
-							file.import = uploads/media/
-							file.import.data = page: media
-							file.import.listNum = 0
-						}
-
-						override.override.cObject = IMG_RESOURCE
-						override.override.cObject {
+						cObject {
+							file = {$plugin.tx_adxsocialshareprivacy.image}
 							file.import = uploads/pics/
 							file.import.field = tx_adxsocialshareprivacy_image
 							file.import.listNum = 0
 						}
 
 						required = 1
-						wrap = image:' | ',
+						wrap.dataWrap = image:'{getIndpEnv: TYPO3_SITE_URL} | ',
 					}
 
 					70 = TEXT
@@ -163,7 +152,7 @@ plugin.tx_adxsocialshareprivacy {
 								file.import.listNum = 0
 
 								stdWrap.required = 1
-								stdWrap.wrap = picture:' | ',
+								stdWrap.dataWrap = picture:'{getIndpEnv: TYPO3_SITE_URL} | ',
 							}
 						}
 
@@ -496,7 +485,7 @@ plugin.tx_adxsocialshareprivacy {
 								file.import.listNum = 0
 
 								stdWrap.required = 1
-								stdWrap.wrap = media:' | ',
+								stdWrap.wrap = media:'{getIndpEnv: TYPO3_SITE_URL} | ',
 							}
 						}
 
@@ -658,7 +647,7 @@ plugin.tx_adxsocialshareprivacy {
 								file.import.listNum = 0
 
 								stdWrap.required = 1
-								stdWrap.wrap = photo:' | ',
+								stdWrap.wrap = photo:'{getIndpEnv: TYPO3_SITE_URL} | ',
 							}
 
 							50 = TEXT

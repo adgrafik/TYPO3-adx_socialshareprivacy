@@ -768,9 +768,12 @@ plugin.tx_adxsocialshareprivacy {
 			30 {
 				userFunc = tx_t3jquery->addJS
 				compress = 1
+				jsfile = {$plugin.tx_adxsocialshareprivacy.language}
+				jsfile.override.data = TSFE: lang
 				jsfile.if.value = de,es,fr,nl,pl,pt,ru
 				jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
-				jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/{$plugin.tx_adxsocialshareprivacy.language}/socialshareprivacy.js
+				jsfile.if.isInList.override.data = TSFE: lang
+				jsfile.wrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /socialshareprivacy.js
 			}
 
 
@@ -798,9 +801,12 @@ plugin.tx_adxsocialshareprivacy {
 					30 {
 						userFunc = tx_t3jquery->addJS
 						compress = 1
+						jsfile = {$plugin.tx_adxsocialshareprivacy.language}
+						jsfile.override.data = TSFE: lang
 						jsfile.if.value = de,es,fr,nl,pl,pt,ru
 						jsfile.if.isInList = {$plugin.tx_adxsocialshareprivacy.language}
-						jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/{$plugin.tx_adxsocialshareprivacy.language}/modules/{register: tx_adxsocialshareprivacy_service}.js
+						jsfile.if.isInList.override.data = TSFE: lang
+						jsfile.dataWrap = EXT:adx_socialshareprivacy/Resources/Public/panzi_socialshareprivacy/javascripts/locale/ | /modules/{register: tx_adxsocialshareprivacy_service}.js
 					}
 				}
 			}

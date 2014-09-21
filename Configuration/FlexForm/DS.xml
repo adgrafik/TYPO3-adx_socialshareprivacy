@@ -81,6 +81,10 @@
 										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.xing</numIndex>
 										<numIndex index="1">xing</numIndex>
 									</numIndex>
+									<numIndex index="16">
+										<numIndex index="0">LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xlf:tx_adxsocialshareprivacy.order.fbshare</numIndex>
+										<numIndex index="1">fbshare</numIndex>
+									</numIndex>
 								</items>
 							</config>
 						</TCEforms>

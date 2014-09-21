@@ -804,6 +804,16 @@ plugin.tx_adxsocialshareprivacy {
 					if.isInList = xing
 					if.negate = 1
 				}
+
+				#
+				# Facebook Share options
+				#
+				tx_adxsocialshareprivacy_services_fbshare = fbshare:{status:false},
+				tx_adxsocialshareprivacy_services_fbshare {
+					if.value.data = register: tx_adxsocialshareprivacy_services
+					if.isInList = fbshare
+					if.negate = 1
+				}
 			}
 
 			20 = USER
@@ -933,6 +943,9 @@ plugin.tx_adxsocialshareprivacy {
 
 						23 = TEXT
 						23.data = register: tx_adxsocialshareprivacy_services_xing
+
+						24 = TEXT
+						24.data = register: tx_adxsocialshareprivacy_services_fbshare
 
 						wrap = services: { | }
 					}

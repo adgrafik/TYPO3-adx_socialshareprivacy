@@ -15,7 +15,8 @@ Supported share services:
  * [Delicious](#delicious-options-delicious)
  * [Disqus](#disqus-options-disqus)
  * [EMail](#email-options-mail)
- * [Facebook](#facebook-options-facebook)
+ * [Facebook Like/Recommend](#facebook-like-recommend-options-facebook)
+ * [Facebook Share](#facebook-share-options-fbshare)
  * [Flattr](#flattr-options-flattr)
  * [Google+](#google-options-gplus)
  * [Hacker News](#hacker-news-options-hackernews)
@@ -64,6 +65,7 @@ Overview
  * [jQuery cookies plugin](https://github.com/panzi/jQuery-Cookies) (optional)
  * [uglifyjs](https://npmjs.org/package/uglify-js) (for [build.sh](#buildsh))
  * [uglifycss](https://npmjs.org/package/uglifycss) (for [build.sh](#buildsh))
+ * [extend](https://www.npmjs.org/package/extend) (for [build.sh](#buildsh))
 
 The jQuery cookies plugin is needed in order to enable services permanently.
 However, you can plug in you own replacement to store this options differently
@@ -109,6 +111,7 @@ However, for your convenience I provide these precompiled versions of the script
  * [jquery.socialshareprivacy.min.de.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.de.js) <sup>3</sup>
  * [jquery.socialshareprivacy.min.es.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.es.js) <sup>3</sup>
  * [jquery.socialshareprivacy.min.fr.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.fr.js) <sup>3</sup>
+ * [jquery.socialshareprivacy.min.it.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.it.js) <sup>3</sup>
  * [jquery.socialshareprivacy.min.nl.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.nl.js) <sup>3</sup>
  * [jquery.socialshareprivacy.min.pl.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.pl.js) <sup>3</sup>
  * [jquery.socialshareprivacy.min.pt.js](http://panzi.github.io/SocialSharePrivacy/javascripts/jquery.socialshareprivacy.min.pt.js) <sup>3</sup>
@@ -772,13 +775,13 @@ Possible values: <code>comments</code> or <code>reactions</code></td>
 </tbody>
 </table>
 
-### <span id="facebook-options-facebook">Facebook Options</span> (`facebook`)
+### <span id="facebook-like-recommend-options-facebook">Facebook Like/Recommend Options</span> (`facebook`)
 
 Note that facebook only supports certain languages and requires the region suffix (e.g.
 `en_US`). The facebook service ensures that only supported language strings are sent
 to facebook, because otherwise facebook fails to render anything.
 
-See also: [official documentation](http://developers.facebook.com/docs/reference/plugins/like/)
+See also: [official documentation](https://developers.facebook.com/docs/reference/plugins/like/)
 
 Example:
 
@@ -822,6 +825,12 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
+
+### <span id="facebook-share-options-facebook">Facebook Share Options</span> (`fbshare`)
+
+There are no Facebook Share specific options.
+
+See also: [official documentation](https://developers.facebook.com/docs/plugins/share/)
 
 ### <span id="flattr-options-flattr">Flattr Options</span> (`flattr`)
 
@@ -868,8 +877,8 @@ $(document).ready(function () {
 <tr>
 <td>category</td>
 <td></td>
-<td>Possible values: <code>Text</code>, <code>Images</code>, <code>Video</code>, <code>Software</code>, <code>People</code> or
-<code>Other</code></td>
+<td>Possible values: <code>text</code>, <code>images</code>, <code>video</code>, <code>audio</code>,
+<code>software</code>, <code>people</code> or <code>rest</code></td>
 </tr>
 <tr>
 <td>tags</td>
@@ -1343,7 +1352,13 @@ The element of the share button is passed as `this`.
 
 You can use `build.sh` to pack the modules and languages you want. This requires
 [uglifyjs](https://npmjs.org/package/uglify-js) and
-[uglifycss](https://npmjs.org/package/uglifycss) to be installed.
+[uglifycss](https://npmjs.org/package/uglifycss) and
+[extend](https://www.npmjs.org/package/extend) to be installed.
+
+In case you haven't done so already you might need to checkout the git submodules with
+```sh
+git submodule update --init --recursive
+```
 
 Example:
 

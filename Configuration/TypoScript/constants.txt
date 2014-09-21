@@ -5,8 +5,8 @@ plugin.tx_adxsocialshareprivacy {
 
 	id = 
 
-	# Available values: buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
-	order = buffer, delicious, disqus, mail, facebook, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
+	# Available values: buffer, delicious, disqus, mail, facebook, fbshare, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
+	order = buffer, delicious, disqus, mail, facebook, fbshare, flattr, gplus, hackernews, pinterest, linkedin, reddit, stumbleupon, tumblr, twitter, xing
 
 	# Available values: line (default), box
 	layout = 

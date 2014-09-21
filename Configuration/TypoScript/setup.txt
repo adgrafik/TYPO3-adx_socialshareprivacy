@@ -938,7 +938,8 @@ plugin.tx_adxsocialshareprivacy {
 					}
 
 					wrap = socialSharePrivacy({ | });
-					stdWrap.dataWrap = $('#{register: tx_adxsocialshareprivacy_id}'). |
+					stdWrap.dataWrap = $('#{register: tx_adxsocialshareprivacy_id}'). | 
+					stdWrap.outerWrap = (function($){ $(document).ready(function(){ | }); })(jQuery);
 
 					# Remove dirty commas.
 					stdWrap.replacement.10.search = ,}

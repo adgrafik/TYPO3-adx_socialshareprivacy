@@ -28,7 +28,7 @@ if (version_compare(TYPO3_branch, '6.0', '<')) {
 		'LLL:EXT:adx_socialshareprivacy/Resources/Private/Language/locallang_db.xml:tt_content.list_type'
 	);
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'ad: Social Share Privacy');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', 'Social Share Privacy');
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForm/DS.xml');
 
 }
